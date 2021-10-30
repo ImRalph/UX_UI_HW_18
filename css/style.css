@@ -114,3 +114,14 @@ img{
   height:83;
 
 }
+
+.flexContainer{
+  display:flex;
+  width:33%;
+
+}
+
+.workGrid{
+  display:grid;
+  
+}
