@@ -1,6 +1,6 @@
-body{
+/*body{
   background-color: black;
-}
+}*/
 .inline-block{
     display:inline-block;
     vertical-align:top;
@@ -14,7 +14,7 @@ nav{
     padding:1%;
   }
   ul{
-    width:30%;
+    width:40%;
     margin-left:auto;
     color:grey;
     
@@ -118,10 +118,37 @@ img{
 .flexContainer{
   display:flex;
   width:33%;
+  flex-direction: row;
 
 }
 
 .workGrid{
   display:grid;
-  
+  grid-template-columns: auto auto;
+  grid-template-rows: 200px 200px;
+  grid-template-areas: 'proj1' 'proj2';
+  text-align: center;
+  padding: 20px 0;
+}
+.project1{
+  grid-area: proj1;
+}
+.project2{
+  grid-area: proj2;
+}
+
+
+/*-------MOBILE QUERY-------*/
+@media only screen and (max-width:600){
+  .flexContainer{
+    flex-direction: column;
+    width: 100%;
+  }
+  .workGrid{
+    grid-template-rows: 300px 300px 300px 
+    300px 300px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'proj1' 'proj2';
+    
+  }
 }
